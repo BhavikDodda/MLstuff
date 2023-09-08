@@ -39,6 +39,7 @@ def main():
         VecIterate=tuple(k/magVecNew for k in VecNew)
     
     print(VecIterate)
+    print(magnitude(VecIterate))
 
 
     
