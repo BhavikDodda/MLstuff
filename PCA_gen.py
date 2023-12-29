@@ -19,9 +19,18 @@ myDataSetY=[
     2.99,
     1.88
 ]
+myDataSetZ=[
+    1,
+    1,
+    4,
+    2,
+    4,
+    2,
+    1
+]
 DATASIZE=len(myDataSetX)
 
-myDataset=[(myDataSetX[k],myDataSetY[k]) for k in range(DATASIZE)]
+myDataset=[(myDataSetX[k],myDataSetY[k],myDataSetZ[k]) for k in range(DATASIZE)]
 DIMENSION=len(myDataset[0])
 
 def main():
@@ -55,6 +64,8 @@ def magnitude(Vec):
     return math.sqrt(sum(k**2 for k in Vec))
 
 def dotProd(Vec1,Vec2):
+    print(Vec1)
+    print(Vec2)
     return sum(Vec1[k]*Vec2[k] for k in range(len(Vec1)))
 
 def proj(Vec,Point):
